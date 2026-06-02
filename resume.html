@@ -59,7 +59,26 @@
     }
 
     .center { text-align: center; }
-    .photo { height: 142px; text-align: center; color: transparent; }
+    .blank-cell { border-color: transparent; }
+    .photo {
+      height: 142px;
+      padding: 0;
+      position: relative;
+      text-align: center;
+      line-height: 0;
+      overflow: hidden;
+    }
+
+    .photo img {
+      display: block;
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+    }
+    .small { font-size: 11px; line-height: 1.45; }
     .h-28 td, .h-28 th { height: 28px; }
     .h-86 td, .h-86 th { height: 86px; }
 
@@ -84,46 +103,49 @@
       <tr class="h-28">
         <th class="label">경력구분</th>
         <td class="center">신입</td>
-        <td colspan="2"></td>
-        <td></td>
-        <td></td>
-        <td colspan="2" rowspan="2"></td>
-        <td rowspan="5" class="photo">사진</td>
+        <td colspan="2" class="blank-cell"></td>
+        <td class="blank-cell"></td>
+        <td class="blank-cell"></td>
+        <td colspan="2" rowspan="2" class="blank-cell"></td>
+        <td rowspan="5" class="photo"><img src="008 송민규 01052421959s.jpg" alt="증명사진"></td>
       </tr>
       <tr class="h-28">
-        <td colspan="4"></td>
-        <td></td>
-        <td></td>
+        <td colspan="4" class="blank-cell"></td>
+        <td class="blank-cell"></td>
+        <td class="blank-cell"></td>
       </tr>
       <tr class="h-28">
         <th class="label">성 명</th>
-        <td></td>
+        <td class="center">송민규</td>
         <th class="label">생년월일</th>
-        <td></td>
+        <td class="center">99.09.10</td>
         <th colspan="3" class="label">성별</th>
-        <td></td>
+        <td class="center">남</td>
       </tr>
       <tr class="h-28">
         <th class="label">주 소</th>
-        <td colspan="2"></td>
+        <td colspan="2">인천 남동구 선수촌로 55</td>
         <th class="label">Github</th>
-        <td colspan="4"></td>
+        <td colspan="4">https://github.com/ned-razzz</td>
       </tr>
       <tr class="h-28">
         <th class="label">핸드폰</th>
-        <td colspan="2"></td>
+        <td colspan="2" class="center">010-5242-1959</td>
         <th class="label">이메일</th>
-        <td colspan="4"></td>
+        <td colspan="4">smg9972@gmail.com</td>
       </tr>
       <tr class="h-28">
-        <td colspan="9"></td>
+        <td colspan="9" class="blank-cell"></td>
       </tr>
       <tr class="h-86">
         <th class="label">핵심역량</th>
-        <td colspan="8">
-          총 ~개의 프로젝트와 오픈소스 기여 등 를 통해 다양한 언어와 환경을 활용한 경험이 있습니다.<br>
-          데이터와 문서화를 통해 빠르게 이슈에 대응하고 최적화된 문제 해결 방법을 제시합니다.<br>
-          팀 목표 달성을 위한 효율적인 협업 방법을 고안할 수 있습니다.
+        <td colspan="8" class="small">
+          <strong>ROS2/C++ 기반 로봇 소프트웨어 개발 역량</strong><br>
+          ROS2와 C++를 활용해 자율 도로주행 기능과 모방학습 기반 Pick and Place 기능을 구현<br>
+          <strong>요구사항 기반 설계 및 구현 역량</strong><br>
+          요구사항 정의, 아키텍처 설계, 상세 설계 순으로 개발 범위를 구체화하고 설계 문서를 기반으로 기능 구현까지 연결<br>
+          <strong>Jira/Confluence 기반 협업 및 프로젝트 관리 역량</strong><br>
+          Jira로 업무를 분장·추적하고 Confluence에 설계를 문서화하여 이슈 대응과 피드백 반영을 체계화
         </td>
       </tr>
     </table>
@@ -134,7 +156,7 @@
         <col style="width: 25%"><col style="width: 10%"><col style="width: 11%">
       </colgroup>
       <tr class="h-28">
-        <th rowspan="2" class="section">학<br>력</th>
+        <th rowspan="3" class="section">학<br>력</th>
         <th class="label">학교명</th>
         <th class="label">학과/전공명</th>
         <th class="label">기간</th>
@@ -142,11 +164,18 @@
         <th class="label">학점</th>
       </tr>
       <tr class="h-28">
-        <td class="center">~ 대학교</td>
+        <td class="center">명지대학교</td>
         <td class="center">컴퓨터공학과</td>
-        <td class="center">2020.08 ~ 2024.06</td>
+        <td class="center">2018.02 ~ 2025.02</td>
         <td class="center">졸업</td>
-        <td class="center">3.5/4.5</td>
+        <td class="center">3.5 / 4.5</td>
+      </tr>
+      <tr class="h-28">
+        <td class="center">인천고등학교</td>
+        <td class="center">이과</td>
+        <td class="center">2015.03 ~ 2017.03</td>
+        <td class="center">졸업</td>
+        <td class="center"></td>
       </tr>
     </table>
 
@@ -161,51 +190,17 @@
         <th class="label">교육내용</th>
       </tr>
       <tr class="h-86">
-        <td class="center">애드인에듀<br>IT 아카데미</td>
-        <td class="center">2024.12<br>~ 2025.02<br>(44일, 349시간)</td>
-        <td>
-          ■ 비정형 데이터/자연어 처리 딥러닝 미니프로젝트(39시간)<br>
-          -<br>
-          ■ 생성형 AI 모델 활용 서비스 개발 프로젝트<br>
-          -
+        <td class="center">VLA 모방학습 기반<br>Physical AI 엔지니어<br>양성과정</td>
+        <td class="center">2025.12<br>~ 2026.06<br>(6개월)</td>
+        <td class="small">
+          ■ 제스쳐 인식 컴퓨터 제어 딥러닝 프로젝트 (2026.01, 7일)<br>
+          역할: 설계 개선, 성능 최적화, 모델 훈련 데이터 검증 / 기술: Tensorflow, LSTM, Python<br>
+          성과: 영상 데이터 처리 오버헤드 개선, 기능별 모듈화, 훈련 데이터 시각화 및 솎아내기를 통한 품질 향상<br><br>
+          ■ 자율주행 택시 프로젝트 (2026.03 ~ 2026.04, 20일)<br>
+          역할: 택시 서비스 설계, 도로주행 경로 계획 / 기술: ROS2, Nav2, Python, C++, Linux, PyQt6<br>
+          성과: ROS2 기반 2차선 도로 그래프 맵 구성, 교통상황 고려 최적 경로 계획 구현, 일정 관리 및 기능 통합<br><br>
+          ■ Physical AI 프로젝트 (2026.05 ~ 2026.06, 30일)
         </td>
-      </tr>
-    </table>
-
-    <table>
-      <colgroup>
-        <col style="width: 12%"><col style="width: 28%"><col style="width: 35%"><col style="width: 25%">
-      </colgroup>
-      <tr class="h-28">
-        <th rowspan="2" class="section">인턴경험</th>
-        <th class="label">기업 명</th>
-        <th class="label">기간</th>
-        <th class="label">직무</th>
-      </tr>
-      <tr class="h-28">
-        <td></td>
-        <td class="center">2023.01.09 – 2023.06.30 (6 개월)</td>
-        <td></td>
-      </tr>
-    </table>
-
-    <table>
-      <colgroup>
-        <col style="width: 12%"><col style="width: 25%"><col style="width: 22%">
-        <col style="width: 20%"><col style="width: 21%">
-      </colgroup>
-      <tr class="h-28">
-        <th rowspan="2" class="section">수상</th>
-        <th class="label">대회명</th>
-        <th class="label">수상명</th>
-        <th class="label">수상일자</th>
-        <th class="label">기관</th>
-      </tr>
-      <tr class="h-28">
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
       </tr>
     </table>
 
@@ -215,15 +210,19 @@
         <col style="width: 19%"><col style="width: 19%">
       </colgroup>
       <tr class="h-28">
-        <th rowspan="2" class="section">자격증</th>
+        <th rowspan="3" class="section">자격증</th>
         <th class="label">자격명</th>
         <th class="label">취득일</th>
-        <th rowspan="2" class="section">활용언어</th>
-        <th rowspan="2" class="center">KR, US</th>
+        <th rowspan="3" class="section">활용언어</th>
+        <th rowspan="3" class="center">KR</th>
       </tr>
       <tr class="h-28">
-        <td class="center">운전면허 1종 보통</td>
-        <td class="center">2020.07.15</td>
+        <td class="center">운전면허 2종 보통</td>
+        <td class="center">2020.03.03</td>
+      </tr>
+      <tr class="h-28">
+        <td class="center">OPIc IM1</td>
+        <td class="center">2025.09.06</td>
       </tr>
     </table>
 
@@ -238,31 +237,27 @@
       </tr>
       <tr class="h-28">
         <td class="center">프로그래밍 언어</td>
-        <td>Java(상) Python(중), C/C++(중하)</td>
+        <td>Java(중), Python(상), C/C++(하)</td>
       </tr>
       <tr class="h-28">
         <td class="center">개발환경</td>
-        <td></td>
+        <td>Linux</td>
       </tr>
       <tr class="h-28">
         <td class="center">프레임워크</td>
-        <td></td>
+        <td>ROS2(중), Lerobot(하)</td>
       </tr>
       <tr class="h-28">
         <td class="center">프론트엔드</td>
-        <td></td>
+        <td>ReactJS(중), PyQt6(중)</td>
       </tr>
       <tr class="h-28">
         <td class="center">데이터베이스</td>
-        <td></td>
-      </tr>
-      <tr class="h-28">
-        <td class="center">DevOps/Infra</td>
-        <td></td>
+        <td>MySQL(중), PostgreSQL(하), SQLite(중)</td>
       </tr>
       <tr class="h-28">
         <td class="center">형상관리 및 협업도구</td>
-        <td></td>
+        <td>Jira(중), Confluence(중), Slack(중)</td>
       </tr>
     </table>
   </main>
